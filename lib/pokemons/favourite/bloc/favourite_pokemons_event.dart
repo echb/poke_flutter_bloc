@@ -6,3 +6,10 @@ sealed class FavouritePokemonsEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
+class OnInit extends FavouritePokemonsEvent {}
+
+class OnToggleFavourite extends FavouritePokemonsEvent {
+  final Pokemon favourite;
+  const OnToggleFavourite(this.favourite);
+}

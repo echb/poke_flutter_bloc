@@ -1,10 +1,21 @@
 part of 'favourite_pokemons_bloc.dart';
 
-sealed class FavouritePokemonsState extends Equatable {
-  const FavouritePokemonsState();
-  
-  @override
-  List<Object> get props => [];
-}
+final class FavouritePokemonsState extends Equatable {
+  final Set<Pokemon> favourite;
 
-final class FavouritePokemonsInitial extends FavouritePokemonsState {}
+  const FavouritePokemonsState({
+    this.favourite = const {},
+  });
+
+  copyWith({
+    Set<Pokemon>? favourite,
+  }) =>
+      FavouritePokemonsState(
+        favourite: favourite ?? this.favourite,
+      );
+
+  @override
+  List<Object> get props => [
+        favourite,
+      ];
+}

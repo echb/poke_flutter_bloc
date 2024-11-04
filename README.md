@@ -65,3 +65,4 @@ Before you begin, ensure you have the following dependencies and tools installed
 2. To run the app use one of the following commands:
    - Vscode debug mode `fn + F5`
    - Terminal command `flutter run` and select possible device
+   - If the images does not load on web use the command `flutter run -d chrome --web-renderer html`
